@@ -43,22 +43,7 @@ export default function Product({ product }: ProductProps) {
 
         })
 
-        // clearCart();
-        console.log('cartDetails', cartDetails)
 
-        // try {
-        //     setIsCreatingCheckout(true);
-        //     const response = await axios.post('/api/checkout', {
-        //         priceId: product.defaultPriceId,
-        //     })
-
-        //     const { checkoutUrl } = response.data;
-
-        //     window.location.href = checkoutUrl;
-        // } catch (err) {
-        //     alert('Falha ao redirecionar ao checkout!')
-        //     setIsCreatingCheckout(false);
-        // }
     }
 
     return (
@@ -94,7 +79,7 @@ export default function Product({ product }: ProductProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
     return {
         paths: [
-            { params: { id: 'prod_MeHo6KI594ojm0 ' } },
+            { params: { id: 'prod_MeHoR5EXvBTbht' } },
         ],
         fallback: true,
     }
@@ -125,6 +110,6 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({ para
                 defaultPriceId: price.id,
             }
         },
-        revalidate: 60 * 60 * 1, // 1 hour
+        revalidate: 60 * 60 * 1, // 1 hournp
     }
 }

@@ -17,7 +17,7 @@ export default function Success({ products, customerName }: SuccessProps) {
     const { clearCart } = useShoppingCart();
     useEffect(() => {
         clearCart();
-    }, [])
+    }, [clearCart])
 
     return (
         <>
